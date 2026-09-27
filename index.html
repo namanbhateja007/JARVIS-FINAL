@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JARVIS — AI Voice Interface</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <section id="intro" class="screen intro-screen">
+    <div class="intro-glow"></div>
+    <div class="intro-content">
+      <p class="eyebrow">J.A.R.V.I.S. SYSTEM</p>
+      <h1 id="introText">Hi there.</h1>
+      <div class="intro-line"></div>
+      <p class="intro-sub">Initializing your personal AI interface</p>
+    </div>
+  </section>
+
+  <main id="app" class="app hidden">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>JARVIS</span>
+      </div>
+      <div class="status-pill">
+        <span class="status-light"></span>
+        <span id="systemStatus">STANDBY</span>
+      </div>
+      <div class="top-time" id="clock">00:00:00</div>
+    </header>
+
+    <section class="hero">
+      <div class="ambient ambient-a"></div>
+      <div class="ambient ambient-b"></div>
+
+      <div class="core-wrap" id="coreWrap">
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="orbit orbit-3"></div>
+
+        <div class="satellite sat-a"></div>
+        <div class="satellite sat-b"></div>
+        <div class="satellite sat-c"></div>
+
+        <div class="core-halo"></div>
+        <div class="core">
+          <div class="core-inner">
+            <span class="core-label">JARVIS</span>
+            <span class="core-state" id="coreState">READY</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="visualizer" id="visualizer" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <p class="micro" id="microText">VOICE INTERFACE ONLINE</p>
+        <h2 id="mainText">How can I help?</h2>
+        <p id="subText">Say <span>“Jarvis”</span> to begin.</p>
+      </div>
+
+      <div class="command-card" id="commandCard">
+        <span class="command-icon">⌁</span>
+        <span id="commandText">Waiting for voice input…</span>
+      </div>
+    </section>
+
+    <footer class="bottombar">
+      <button class="control-btn" id="listenBtn">
+  <span class="mic-ring"><span class="mic-dot"></span></span>
+  <span>Demo</span>
+</button>
+      <button class="control-btn" id="listenBtn">
+        <span class="mic-ring"><span class="mic-dot"></span></span>
+        <span>Demo</span>
+      </button>
+
+      <div class="activity">
+        <span class="activity-label">ACTIVITY</span>
+        <div class="activity-bars" id="activityBars"></div>
+      </div>
+
+      <div class="footer-note">JARVIS AI CORE <span>•</span> LOCAL INTERFACE</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
