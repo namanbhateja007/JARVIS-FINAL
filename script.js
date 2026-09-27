@@ -573,10 +573,6 @@ setInterval(
   1000
 );
 
-setInterval(
-  syncBackendState,
-  100
-);
 
 updateClock();
 
